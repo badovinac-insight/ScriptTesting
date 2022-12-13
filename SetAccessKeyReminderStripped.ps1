@@ -8,6 +8,6 @@ if ($storageAccount.KeyCreationTime.Key1 -eq $null -or $storageAccount.KeyCreati
 }
 else
 {
-    $storageAccount = Set-AzStorageAccount -ResourceGroupName $ResourceGroup -Name $StorageAccountName  -KeyExpirationPeriodInDay $NumDays
+    $storageAccount = Set-AzStorageAccount -ResourceGroup $ResourceGroupName -Name $StorageAccountName  -KeyExpirationPeriodInDay $NumDays
     #Write-Host $account.StorageAccountName "access key expiration period successfully updated to" $NumDays "days"
 }
