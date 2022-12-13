@@ -1,6 +1,6 @@
 Param($StorageAccountName, $NumDays, $ResourceGroupName)
 
-$storageAccount = Get-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageAccountName
+$storageAccount = Get-AzStorageAccount -ResourceGroup $ResourceGroupName -Name $StorageAccountName
 
 if ($storageAccount.KeyCreationTime.Key1 -eq $null -or $storageAccount.KeyCreationTime.Key2 -eq $null)
 {
